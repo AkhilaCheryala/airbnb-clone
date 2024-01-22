@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>room booking</title>
+    <style>
+        body{
+           width: 60%;
+           height: 60%;
+           background-color: aqua ;
+          }
+        form{
+             padding: 0rem 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: white;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        form input{
+            width:min-content;
+        }
+        .room{
+        width: 100px;
+        height: 100px;
+        }
+        .room-type-radio{
+            display: flex;
+            gap: 10rem;
+           
+        }
+        .checkbox-group{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        #age ,#adults,#children{
+    padding: 7px;
+        }
+        .age{
+            display: flex;
+           gap: 2.5rem;
+        }
+        .user-details input{
+        width: 200px;
+        height: 30px;
+        margin-right: 1rem;
+        }
+         h2{
+            text-align: center;
+            padding: 0;
+            color: white;
+        } 
+        .nav-bar{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(202, 46, 46);
+        margin: 1rem;
+        }
+        .user-details{
+           display: flex;
+        }
+        h4{
+            margin:10px 0px;
+        }
+        .datePicker{
+            display: flex;
+       gap: 1.5rem;
+        }
+        .datePicker input{
+            padding: 8px 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="registrationForm">
+        <nav class="nav-bar">
+        <h2>RESERVATION FORM</h2>
+        </nav>
+        <div class="user-details">
+            <span>
+            <h4>FirstName</h4>
+           <input type="text" placeholder="Firstname" id="name" required>
+          </span>
+          <span>
+           <h4>LastName</h4>
+           <input type="text" placeholder="Lastname" id="name" required>
+          </span> 
+       </div>
+       <div class="datePicker">
+        <span>
+         <h4>Check In</h4>
+         <input type="date" name="date" id="date" required>
+        </span>
+        <span>
+         <h4>Check Out</h4>
+         <input type="date" name="date" id="date" required>
+        </span>
+        </div>
+          <div class="age" >
+            <span>
+                <h4>Age</h4>
+              <input type="number" id="age" placeholder="enter">
+           </span>
+           <span>
+           <h4>Adults</h4>
+         <input type="number" id="adults" name="adults" min="1" max="10" required>
+        </span>
+        <span>
+         <h4>Children</h4>
+         <input type="number" id="children" name="children" min="1" max="10" required>
+        </span>
+        </div>
+        <h3 class="roomType"> Choose Room Type</h3>
+          <div class="room-type-radio">
+             <div>
+              <img src="assets/Airbnb resources/olexandr-ignatov-w72a24brINI-unsplash.jpg" class="room">
+              <div>
+              <input type="radio" id="delux" name="roomType" value="delux">
+              <label>DELUX</label>
+            </div>
+            </div>
+            <div>
+              <img src="assets/Airbnb resources/house-method-CqVHT8g45R8-unsplash.jpg"class="room">
+              <div>
+              <input type="radio" id="standard" name="roomType" value="standard">
+              <label>STANDARD</label>
+            </div>
+            </div> 
+       </div>
+        <div class="checkbox-group">
+            <h3>Amenities we provide</h3>
+            <div>
+                <input type="checkbox" id="pool" name="amenities" value="Pool">
+                <label for="pool">Pool</label>
+            </div>
+            <div>
+                <input type="checkbox" id="gym" name="amenities" value="Gym">
+                <label for="gym">Gym</label>
+            </div>
+            <div>
+                <input type="checkbox" id="spa" name="amenities" value="Spa">
+                <label for="spa">Spa</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Theatre" name="amenities" value="Theatre">
+                <label for="theatre">Theatre</label>
+            </div>
+            <div>
+                <input type="checkbox" id="balcony" name="amenities" value="Balcony">
+                <label for="Balcony">Balcony</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ac" name="amenities" value="ac">
+                <label for="ac">AC</label>
+            </div>
+            
+        </div>
+    
+    <button type="submit">Reserve</button>
+</form>
+    
+</body>
+</html>

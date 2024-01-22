@@ -20,4 +20,13 @@
       scrollbar.scrollLeft = Math.min(newScrollLeft, scrollbar.scrollWidth - scrollbar.clientWidth);
     });
  });
-// links
+// iframe
+function openIframe() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("iframeContainer").style.display = "block";
+}
+
+function closeIframe() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("iframeContainer").style.display = "none";
+}
