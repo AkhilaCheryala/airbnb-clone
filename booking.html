@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>room booking</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
         body{
-           width: 60%;
-           height: 60%;
-           background-color: aqua ;
+            
+           font-family: "Mandali", sans-serif;
           }
         form{
              padding: 0rem 5rem;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 10px;
             background-color: white;
             flex-wrap: wrap;
             align-content: center;
@@ -34,7 +34,7 @@
         .checkbox-group{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+           gap: 5px;
         }
         #age ,#adults,#children{
     padding: 7px;
@@ -57,7 +57,7 @@
             display: flex;
             justify-content: center;
             background-color: rgb(202, 46, 46);
-        margin: 1rem;
+             margin: 1rem;
         }
         .user-details{
            display: flex;
@@ -71,6 +71,20 @@
         }
         .datePicker input{
             padding: 8px 40px;
+        }
+        #reserve{
+         margin: 2rem 0;
+         width: max-content;
+         padding: 1rem 12rem;
+         border-radius: 10px;
+         background-color: rgb(202, 46, 46);
+         color: white;
+         border: none;
+         font-size: large;
+        }
+        #reserve:hover{
+         opacity: 0.5;
+        
         }
     </style>
 </head>
@@ -131,8 +145,8 @@
             </div>
             </div> 
        </div>
-        <div class="checkbox-group">
-            <h3>Amenities we provide</h3>
+       <h3>Amenities we provide</h3>
+        <div class="checkbox-group"> 
             <div>
                 <input type="checkbox" id="pool" name="amenities" value="Pool">
                 <label for="pool">Pool</label>
@@ -157,10 +171,8 @@
                 <input type="checkbox" id="ac" name="amenities" value="ac">
                 <label for="ac">AC</label>
             </div>
-            
         </div>
-    
-    <button type="submit">Reserve</button>
+    <button type="submit" id="reserve">Reserve</button>
 </form>
     
 </body>

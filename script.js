@@ -30,3 +30,12 @@ function closeIframe() {
   document.getElementById("overlay").style.display = "none";
   document.getElementById("iframeContainer").style.display = "none";
 }
+function openIframeAgain(){
+  document.getElementById("overlayAgain").style.display = "block";
+  document.getElementById("iframeContainerAgain").style.display ="block";
+}
+function iframeClose() {
+  console.log("iframeClose() called");
+  document.getElementById("overlayAgain").style.display = "none";
+  document.getElementById("iframeContainerAgain").style.display = "none";
+}

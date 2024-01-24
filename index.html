@@ -35,8 +35,13 @@
           </div>
           <div class="bar-part-2">
            <div class="search-bar">
-                <button class="search-bar-btn" >Where
+                <button class="search-bar-btn"  onclick="openIframeAgain()">Where
                   <p>Search destinations</p>
+                   <div id="overlayAgain" class="overlayAgain"></div>
+                  <div id="iframeContainerAgain" class="iframe-container-2">
+                     <span class="close-2" onclick="iframeClose()">X</span>
+                    <iframe id="myIframeAgain" src="http://127.0.0.1:5500/booking.html" frameborder="0"></iframe>
+                  </div>
                 </button>
                 <button class="search-bar-btn"> Check in
                     <p>Add dates</p>
