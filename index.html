@@ -35,36 +35,42 @@
           </div>
           <div class="bar-part-2">
            <div class="search-bar">
-                <button class="search-bar-btn"  onclick="openIframeAgain()">Where
+                <button class="search-bar-btn"  onclick="openIframe()">Where
                   <p>Search destinations</p>
-                   <div id="overlayAgain" class="overlayAgain"></div>
-                  <div id="iframeContainerAgain" class="iframe-container-2">
-                     <span class="close-2" onclick="iframeClose()">X</span>
-                    <iframe id="myIframeAgain" src="http://127.0.0.1:5500/booking.html" frameborder="0"></iframe>
-                  </div>
                 </button>
-                <button class="search-bar-btn"> Check in
+                <button class="search-bar-btn"  onclick="openIframe()"> Check in
                     <p>Add dates</p>
                 </button>
-                <button class="search-bar-btn">Check out
+                <button class="search-bar-btn"  onclick="openIframe()">Check out
                     <p>Add dates</p>
                 </button>
-                <button class="search-bar-btn">Who
+                <button class="search-bar-btn"  onclick="openIframe()">Who
                  <p >Add guests</p>
                 </button>
                 <span class="bi bi-search"></span>
+                
              </div>
+            <div id="overlay" class="overlay"></div>
+            <div id="iframeContainer" class="iframe-container">
+               <span class="close" onclick="closeIframe()">X</span>
+               <iframe id="myIframe" src="http://127.0.0.1:5500/login.html" frameborder="0"></iframe>
+           </div>
        </div>
       </section> 
     </nav>
-    <div class="nav_bar-2">
-       <button class="search-bar_btn"> 
+    <div class="nav_bar-2"  onclick="openIframe()">
+       <button class="search-bar_btn"  onclick="openIframe()" > 
          <span class="bi bi-search-heart"></span>
           <div>Any Where
-          <p>Any Week . Add Guests</p></div></button>
-          <div class="nav-filter">
+          <p>Any Week . Add Guests</p></div>
+         </button>
+          <div class="nav-filter" onclick="openIframe()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="display:block;height:20px;width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M5 8a3 3 0 0 1 2.83 2H14v2H7.83A3 3 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.83 4H2V4h6.17A3 3 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
          </div>
+         <div id="iframeContainer" class="iframe-container">
+            <span class="close" onclick="closeIframe()">X</span>
+            <iframe id="myIframe" src="http://127.0.0.1:5500/login.html" frameborder="0"></iframe>
+        </div>
          </div>
      <div class="nav-scroll-bar">
            <button id="scrollLeftButton" ><span class="bi bi-chevron-left"></span></button>
@@ -144,12 +150,13 @@
       <section class="main-section">
           <div class="mainfeed">
              <div class="image-container">
-               <div id="overlay" class="overlay"></div>
-                 <img src="assets/Airbnb resources/air.1.jpeg" alt="" class="pic"  onclick="openIframe()" >
-                 <div id="iframeContainer" class="iframe-container">
-                  <span class="close" onclick="closeIframe()">X</span>
-                  <iframe id="myIframe" src="http://127.0.0.1:5500/login.html" frameborder="0"></iframe>
-              </div>
+                 <img src="assets/Airbnb resources/air.1.jpeg" alt="" class="pic"  onclick="openIframeAgain()" >
+                
+              <div id="overlayAgain" class="overlayAgain"></div>
+             <div id="iframeContainerAgain" class="iframe-container-2">
+               <span class="close-2" onclick="iframeClose()">X</span>
+              <iframe id="myIframeAgain" src="http://127.0.0.1:5500/booking.html" frameborder="0"></iframe>
+            </div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -169,7 +176,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.2.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.2.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
              </div>
@@ -188,7 +195,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.3.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.3.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -209,7 +216,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.4.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.4.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -230,7 +237,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.5.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.5.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -251,7 +258,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.6.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.6.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -271,7 +278,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.7.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.7.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -292,7 +299,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.8.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.8.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -312,7 +319,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.9.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.9.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -333,7 +340,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.10.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.10.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -353,7 +360,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.11.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.11.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -374,7 +381,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.12.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.12.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -395,7 +402,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.1.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.1.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -415,7 +422,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.2.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.2.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>
@@ -435,7 +442,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.3.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.3.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                  <div id="iframeContainer"></div>
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
@@ -456,7 +463,7 @@
           </div>
           <div class="mainfeed">
              <div class="image-container">
-                 <img src="assets/Airbnb resources/air.6.jpeg" alt="" class="pic"onclick="openIframe()">
+                 <img src="assets/Airbnb resources/air.6.jpeg" alt="" class="pic"onclick="openIframeAgain()">
                   <p class="highlight">Guest Favourite</p>
                     <span class="bi bi-heart-fill"onclick="openIframe()"></span>
                     <span class="bi bi-arrow-right-circle-fill"></span>

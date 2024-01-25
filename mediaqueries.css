@@ -26,7 +26,7 @@
         height: 280px;
     }
     .rating{
-        bottom:29% ;
+        bottom:20% ;
     }
     .footer{
         width: 100%;
@@ -41,6 +41,14 @@
     .nav-links{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    }
+    #iframeContainer iframe {
+        width: 220px;
+        height: 320px;
+    }
+    #iframeContainerAgain iframe {
+        width: 400px;
+        height: 700px;  
     }
 }
 @media screen and (max-width:1000px) and (min-width:700px) {

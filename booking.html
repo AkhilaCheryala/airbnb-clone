@@ -7,11 +7,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
         body{
-            
+           background-color: white;
            font-family: "Mandali", sans-serif;
+          
           }
         form{
-             padding: 0rem 5rem;
+            padding: 0rem 5rem;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -41,6 +42,7 @@
         }
         .age{
             display: flex;
+            flex-direction: row;
            gap: 2.5rem;
         }
         .user-details input{
@@ -86,32 +88,86 @@
          opacity: 0.5;
         
         }
+        #message{
+            display: block;
+            color: green;
+           text-align: center;
+           margin-top: 40px;
+            font-size: 40px;
+        }
+        @media screen and (max-width:500px){
+            form{
+                padding: 2rem;
+                display: flex;
+               
+                justify-content: center;
+                gap: 2rem;
+                align-items: flex-start;
+                align-content: center;
+            }
+           .room-type-radio{
+                display: flex;
+                flex-direction: row;
+                
+                gap: 4rem;
+            }
+            .datePicker,.user-details{
+                display: flex;
+                flex-direction: column;
+            }
+            .checkbox-group{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 4rem;
+            }
+            #reserve{
+                padding: 1rem 5rem;
+                margin-left: 2.5rem;
+            }
+            .user-details input{
+                width: 250px;
+            }
+            .datePicker input{
+                width: 160px;
+            }
+            /* h2{
+                font-size: medium;
+            } */
+            .nav-bar{
+                padding: 0rem 1rem;
+            }
+            .age input{
+                width: 50px;
+            }
+
+        }
+        
     </style>
 </head>
 <body>
     
-    <form id="registrationForm">
+    <form id="registrationForm" >
         <nav class="nav-bar">
         <h2>RESERVATION FORM</h2>
         </nav>
         <div class="user-details">
             <span>
             <h4>FirstName</h4>
-           <input type="text" placeholder="Firstname" id="name" required>
+           <input type="text" placeholder="Firstname" id="firstName" required>
           </span>
           <span>
            <h4>LastName</h4>
-           <input type="text" placeholder="Lastname" id="name" required>
+           <input type="text" placeholder="Lastname" id="lastName" required>
           </span> 
        </div>
        <div class="datePicker">
         <span>
          <h4>Check In</h4>
-         <input type="date" name="date" id="date" required>
+         <input type="date" name="date" id="checkIn" required>
         </span>
         <span>
          <h4>Check Out</h4>
-         <input type="date" name="date" id="date" required>
+         <input type="date" name="date" id="checkOut" required>
         </span>
         </div>
           <div class="age" >
@@ -119,7 +175,7 @@
                 <h4>Age</h4>
               <input type="number" id="age" placeholder="enter">
            </span>
-           <span>
+            <span>
            <h4>Adults</h4>
          <input type="number" id="adults" name="adults" min="1" max="10" required>
         </span>
@@ -172,8 +228,49 @@
                 <label for="ac">AC</label>
             </div>
         </div>
-    <button type="submit" id="reserve">Reserve</button>
+    <button type="submit" id="reserve" onclick="submitForm(event)">Reserve</button>
 </form>
-    
+<div id="message"></div>
 </body>
+<script>
+    function submitForm(event) {
+    var form = document.getElementById("registrationForm");
+    var reserveButton = document.getElementById("reserve");
+
+    // checking if fields are filled
+    var firstName = document.getElementById("firstName").value.trim();
+    var lastName = document.getElementById("lastName").value.trim();
+    var checkInDate = document.getElementById("checkIn").value.trim();
+    var checkOutDate = document.getElementById("checkOut").value.trim();
+
+    if (firstName === "" || lastName === "" || checkInDate === "" || checkOutDate === "") {
+        alert("Please fill in all required fields.");
+    } else {
+        // Disable the button to prevent multiple clicks
+        reserveButton.disabled = true;
+        
+        form.style.display = "none";
+
+        // Show the confirmation message
+        var messageDiv = document.getElementById("message");
+        messageDiv.innerHTML = 'Booking Confirmed!!!!<br> Now you can close the window';
+
+        setTimeout(function () {
+            form.reset();
+            form.style.display = "flex"; // Display the form again
+            messageDiv.innerHTML = "";
+            reserveButton.disabled = false; // Enable the button again
+        }, 5000);
+    }
+}
+// Event listener
+window.addEventListener("click", function (event) {
+        var iframe = document.getElementById("myIframeAgain");
+        if (event.target !== iframe && !iframe.contains(event.target)) {
+            // Close the iframe or perform other actions as needed
+            iframe.style.display = "none";
+        }
+    });
+   
+</script>
 </html>
