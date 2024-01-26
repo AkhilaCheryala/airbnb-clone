@@ -74,6 +74,9 @@ p{
  align-items: center;
  gap: 1rem;
  }
+ .nav-bar-4{
+    display: none;
+ }
  .xyz{
     color: rgb(0, 0, 0);
     font-weight: 300;

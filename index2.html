@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>page-two</title>
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+     body{
+        font-family: "Mandali", sans-serif;
+     }
+    #nav-bar,.parent1{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+       border-bottom: 1px solid rgb(171, 165, 165);
+    }
+    .parent-1{
+        border: 1px solid rgb(191, 187, 187);
+        display: flex;
+        border-radius: 30px;
+        gap: 12px;
+        padding: 5px 14px;
+        align-items: center;
+        box-shadow: 2px 2px 5px rgb(171, 168, 168);
+    }
+    p{
+        margin: 0;
+        font-size: medium;
+    }
+    .bi-search{
+        background-color: rgba(225, 54, 54, 0.89);
+        border-radius: 50%;
+        padding: 5px 9px;
+        font-size: 0.8rem;
+        color: white;
+    }
+    .info{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .login-box{
+        font-size: 1.3rem;
+        border: 1px solid grey;
+        border-radius: 25px;
+        color: rgb(62, 59, 59);
+      padding:  0 10px;
+    }
+    .text1,.text2{
+        border-right: 1px solid grey;
+    }
+    .image-container{
+       display: grid;
+       border-radius: 30px;
+       grid-template-columns: 1fr 1fr;
+       margin: 2rem;
+       align-items: center;
+    }
+    .first-pic img{
+        width: 550px;
+        height: 420px;
+        padding: 5px;
+      
+    }
+    .rest-pic img{
+    width: 220px;
+    height: 205px;
+    margin: 0;
+    }
+</style>
+<body>
+        <nav id="nav-bar"> 
+            <div class="logo">
+                <img src="assets/Airbnb resources/logo.png" class="logo-pic" alt="logo">
+            </div>
+               <div class="parent-1">
+                    <p class="text1"> Anywhere &nbsp; </p>
+                    <p class="text2">Any week &nbsp;</p>
+                    <p class="text3"> Add guests</p>
+                    <span class="bi bi-search"></span>
+                </div> 
+                       <div class="info">
+                             <p class="xyz">Airbnb your home </p>
+                             <span class="bi bi-globe"></span>
+                       </div>
+                       <div class="login-box">
+                            <span class="bi bi-list"></span>
+                       <span class="bi bi-person-circle"></span></div>
+           </nav>
+  <div class="main-container">
+    <div  class="image-container">
+        <div class="first-pic">
+           <img src="assets/Airbnb resources/air.1.jpeg" class="pic">
+       </div>
+       <div class="rest-pic">
+        <img src="assets/Airbnb resources/air.2.jpeg" class="pic">
+        <img src="assets/Airbnb resources/air.3.jpeg" class="pic">
+        <img src="assets/Airbnb resources/air.4.jpeg" class="pic">
+        <img src="assets/Airbnb resources/air.5.jpeg" class="pic">
+      </div>
+  </div>
+</body>
+</html>

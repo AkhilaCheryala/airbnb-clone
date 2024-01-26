@@ -39,3 +39,18 @@ function iframeClose() {
   document.getElementById("overlayAgain").style.display = "none";
   document.getElementById("iframeContainerAgain").style.display = "none";
 }
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    document.getElementById("nav-bar-4").style.transform = "translateY(100%)";
+  } else {
+    // Scrolling up
+    document.getElementById("nav-bar-4").style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop;
+});
