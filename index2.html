@@ -10,6 +10,7 @@
      @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
      body{
         font-family: "Mandali", sans-serif;
+        margin: 1rem 2rem;
      }
     #nav-bar,.parent1{
         display: flex;
@@ -58,7 +59,7 @@
        display: grid;
        border-radius: 30px;
        grid-template-columns: 1fr 1fr;
-       margin: 2rem;
+       
        align-items: center;
     }
     .first-pic img{
@@ -70,7 +71,32 @@
     .rest-pic img{
     width: 220px;
     height: 205px;
-    margin: 0;
+    }
+    .br-pic{
+        width: 250px;
+        height: 180px;
+    }
+    .details-container{
+        width: 50%;
+    }
+    .part-5 {
+        display: flex;
+        gap: 1rem;  
+    }
+    .part-5 p{
+        text-align: center;
+    }
+    .part-1,.part-2,.part-3,.part-4,.part-5,.part-6{
+        border-bottom: 1px solid lightgrey;
+       padding: 1rem;
+    }
+    .part-6{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .bi-alarm-fill{
+        text-decoration:line-through;
     }
 </style>
 <body>
@@ -93,6 +119,7 @@
                        <span class="bi bi-person-circle"></span></div>
            </nav>
   <div class="main-container">
+    <h1>NeverMore  holidays  Villa</h1>
     <div  class="image-container">
         <div class="first-pic">
            <img src="assets/Airbnb resources/air.1.jpeg" class="pic">
@@ -104,5 +131,62 @@
         <img src="assets/Airbnb resources/air.5.jpeg" class="pic">
       </div>
   </div>
+  <section class="details-container">
+    <div class="part-1">
+      <h3> Nevermore holidays villa by Alankaari</h3>
+      <p> 8 guests. 4 bedroom. 6 beds. 2 bathrooms</p>
+      <span class="bi bi-star-fill">4.8 rating </span>
+      <span> 15 reviews</span>
+    </div>
+    <div class="part-2">
+        <span class="bi bi-person-fill"></span>
+        <span> Hoisted by Alankaari</span>
+        <P> Sperhoist. 2years hoisting</P>
+    </div>
+    <div class="part-3">
+        <div>
+          <span class="bi bi-calendar-date"></span>
+          <span> free Cancellations</span>
+          <p>Risk free Cancellations anytime.</p>
+       </div>
+       <div>
+        <span class="bi bi-person-workspace"></span>
+        <span>Dedicated workspace</span>
+        <P>A room with wifi that’s well suited for working.</P>
+       </div>
+       <div>
+        <span class="bi bi-balloon-heart"></span>
+        <span> Alankaari is a superhoist </span>
+        <p>Superhosts are experienced, highly rated Hosts.</p>
+       </div>
+    </div>
+    <div class="part-4">
+        <h3>Know more about room</h3>
+        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum hic voluptatem expedita recusandae repellendus, ipsam quis, voluptas minus porro, dolor cumque esse! Nesciunt modi cumque, dolorem molestias reiciendis ipsum voluptatum.</P>
+       </div>
+       <h3>Where you will sleep</h3>
+     <div class="part-5">
+        <div>
+        <img src="assets/Airbnb resources/kam-idris-kyt0PkBSCNQ-unsplash.jpg" class="br-pic">
+        <p>Bedroom 1</p>
+        </div>
+       <div>
+        <img src="assets/Airbnb resources/mark-champs-Id2IIl1jOB0-unsplash.jpg" class="br-pic">
+        <p>Bedroom 2</p>
+        </div>
+    </div>
+    <div class="part-6">
+        <h3>What this place will offer</h3>
+        <span class="bi bi-flower2">&nbsp; Garden</span>
+        <span class="bi bi-house-door">&nbsp;Kitchen</span>
+        <span class="bi bi-person-workspace">&nbsp;Workspace</span>
+        <span class="bi bi-water">&nbsp;Pool</span>
+        <span class=" bi bi-alarm-fill">&nbsp;Carbonmonoxide fill</span>
+        <span class="bi bi-image">&nbsp;Nature view</span>
+        <span class="bi bi-camera-video-fill">&nbsp;Security</span>
+        <span class="bi bi-car-front-fill">&nbsp;Parking</span>
+
+    </div>
+</section>
 </body>
 </html>
