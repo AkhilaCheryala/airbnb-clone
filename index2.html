@@ -1,264 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>page-two</title>
-</head>
-<style>
-     @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
-     body{
-        font-family: "Mandali", sans-serif;
-        margin: 2rem 2rem;
-     }
-    #nav-bar,.parent1{
-        display: flex;
-        justify-content:space-around;
-        align-items: center;
-        margin-top: 1rem;
-        padding-bottom: 1rem;
-       border-bottom: 1px solid rgb(171, 165, 165);
-    }
-    .parent-1{
-        border: 1px solid rgb(191, 187, 187);
-        display: flex;
-        border-radius: 30px;
-        gap: 12px;
-        padding: 5px 14px;
-        align-items: center;
-        box-shadow: 2px 2px 5px rgb(171, 168, 168);
-    }
-    p{
-        margin: 0;
-        font-size: medium;
-    }
-    .bi-search{
-        background-color: rgba(225, 54, 54, 0.89);
-        border-radius: 50%;
-        padding: 5px 9px;
-        font-size: 0.8rem;
-        color: white;
-    }
-    .info{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    .login-box{
-        font-size: 1.3rem;
-        border: 1px solid grey;
-        border-radius: 25px;
-        color: rgb(62, 59, 59);
-      padding:  0 10px;
-    }
-    .text1,.text2{
-        border-right: 1px solid grey;
-    }
-    .image-container{
-       display: grid;
-       border-radius: 30px;
-       grid-template-columns: 1fr 1fr;
-       align-items: center;
-       margin: 0 2rem;
-    }
-    .first-pic img{
-        width: 550px;
-        height: 420px;
-        padding: 5px;
-    }
-    .booking-box{
-  position: sticky;
- 
-    }
-    .rest-pic img{
-    width: 220px;
-    height: 205px;
-    }
-    .br-pic{
-        width: 250px;
-        height: 180px;
-    }
-    .details-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-bottom: 1px solid grey;
-        padding: 1rem;
-        justify-items: center;
-        align-items:first baseline;
-        position: relative;
-    }
-    .part-5 {
-        display: flex;
-        gap: 1rem;  
-    }
-    .part-5 p{
-        text-align: center;
-    }
-    .part-1,.part-2,.part-3,.part-4,.part-5,.part-6{
-        border-bottom: 1px solid lightgrey;
-       padding: 1rem;
-    }
-    .part-6{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-    .bi-alarm-fill{
-         text-decoration:line-through;
-    }
-    .part-3 h3,.part-2 h3{
-        display: inline-block;
-        margin: 5px;
-    }
-    .amount{
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-    }
-    .amount-box{
-        border: 1px solid black;
-        border-radius: 20px;
-        padding: 1rem;
-        width: 20rem;
-        text-align: center; 
-    }
-    .btn-2{
-        background-color: rgba(224, 61, 61, 0.932);
-        color: white;
-        padding: 0 5rem;
-       border: none;
-       border-radius: 15px;
-       margin: 1rem 0rem;
-    }
-    .amount-txt{
-        font-size: smaller;
-        color: rgb(83, 80, 80);
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+	<title>page-two</title>
+  <style>
+	 @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+	 body{
+		 font-family: "Mandali", sans-serif;
+		 margin: 2rem 2rem;
+	 }
+	#nav-bar,.parent1{
+		 display: flex;
+		 justify-content:space-around;
+		 align-items: center;
+		 margin-top: 1rem;
+		 padding-bottom: 1rem;
+		border-bottom: 1px solid rgb(171, 165, 165);
+	}
+	.parent-1{
+		 border: 1px solid rgb(191, 187, 187);
+		 display: flex;
+		 border-radius: 30px;
+		 gap: 12px;
+		 padding: 5px 14px;
+		 align-items: center;
+		 box-shadow: 2px 2px 5px rgb(171, 168, 168);
+	}
+	p{
+		 margin: 0;
+		 font-size: medium;
+	}
+	.bi-search{
+		 background-color: rgba(225, 54, 54, 0.89);
+		 border-radius: 50%;
+		 padding: 5px 9px;
+		 font-size: 0.8rem;
+		 color: white;
+	}
+	.info{
+		 display: flex;
+		 align-items: center;
+		 gap: 1rem;
+	}
+	.login-box{
+		 font-size: 1.3rem;
+		 border: 1px solid grey;
+		 border-radius: 25px;
+		 color: rgb(62, 59, 59);
+	  padding:  0 10px;
+	}
+	.text1,.text2{
+		 border-right: 1px solid grey;
+	}
+	.image-container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	  padding: 5px;
+		width: 95%;
+		align-items: center;
+	}
+	.first-pic img{
+		 width: 500px;
+		 height: 350px;
+		 padding: 5px;
+	}
+	.booking-box{
+ position: sticky;
+
+	}
+	.rest-pic{
+		width: 500px;
+		 height: 350px;
+	}
+	.rest-pic img{
+	width: 180px;
+	height: 170px;
+	}
+	.br-pic{
+		 width: 250px;
+		 height: 160px;
+	}
+	.details-container{
+		 display: grid;
+		 grid-template-columns: 1fr 1fr;
+		 border-bottom: 1px solid grey;
+		 padding: 1rem;
+		 justify-items: center;
+		 align-items:first baseline;
+		 position: relative;
+	}
+	.part-5 {
+		 display: flex;
+		 gap: 1rem;  
+	}
+	.part-5 p{
+		 text-align: center;
+	}
+	.part-1,.part-2,.part-3,.part-4,.part-5,.part-6{
+		 border-bottom: 1px solid lightgrey;
+		padding: 1rem;
+	}
+	.part-6{
+		 display: grid;
+		 grid-template-columns: 1fr 1fr;
+		 gap: 10px;
+	}
+	.bi-alarm-fill{
+		  text-decoration:line-through;
+	}
+	.part-3 h3,.part-2 h3{
+		 display: inline-block;
+		 margin: 5px;
+	}
+	.amount{
+		 display: grid;
+		 grid-template-columns: 1fr 1fr; 
+	}
+	.amount-box{
+		 border: 1px solid black;
+		 border-radius: 20px;
+		 padding: 1rem;
+		 width: 20rem;
+		 text-align: center; 
+	}
+	.btn-2{
+		 background-color: rgba(224, 61, 61, 0.932);
+		 color: white;
+		 padding: 0 5rem;
+		border: none;
+		border-radius: 15px;
+		margin: 1rem 0rem;
+	}
+	.amount-txt{
+		 font-size: smaller;
+		 color: rgb(83, 80, 80);
+	}
 </style>
+</head>
 <body>
-        <nav id="nav-bar"> 
-            <div class="logo">
-                <img src="assets/Airbnb resources/logo.png" class="logo-pic" alt="logo">
-            </div>
-               <div class="parent-1">
-                    <p class="text1"> Anywhere &nbsp; </p>
-                    <p class="text2">Any week &nbsp;</p>
-                    <p class="text3"> Add guests</p>
-                    <span class="bi bi-search"></span>
-                </div> 
-                       <div class="info">
-                             <p class="xyz">Airbnb your home </p>
-                             <span class="bi bi-globe"></span>
-                       </div>
-                       <div class="login-box">
-                            <span class="bi bi-list"></span>
-                       <span class="bi bi-person-circle"></span></div>
-           </nav>
-  <div class="main-container">
-    <h1>NeverMore  holidays  Villa</h1>
-    <div  class="image-container">
-        <div class="first-pic">
-           <img src="assets/Airbnb resources/air.1.jpeg" class="pic">
-       </div>
-       <div class="rest-pic">
-        <img src="assets/Airbnb resources/air.2.jpeg" class="pic">
-        <img src="assets/Airbnb resources/air.3.jpeg" class="pic">
-        <img src="assets/Airbnb resources/air.4.jpeg" class="pic">
-        <img src="assets/Airbnb resources/air.5.jpeg" class="pic">
-      </div>
+	<nav id="nav-bar"> 
+		 <div class="logo">
+			  <img src="assets/Airbnb resources/logo.png" class="logo-pic" alt="logo">
+		 </div>
+			 <div class="parent-1">
+					<p class="text1"> Anywhere &nbsp; </p>
+					<p class="text2">Any week &nbsp;</p>
+					<p class="text3"> Add guests</p>
+					<span class="bi bi-search"></span>
+			  </div> 
+						<div class="info">
+								<p class="xyz">Airbnb your home </p>
+								<span class="bi bi-globe"></span>
+						</div>
+						<div class="login-box">
+							  <span class="bi bi-list"></span>
+						<span class="bi bi-person-circle"></span></div>
+		</nav>
+
+<h1>Never-More  holidays  Villa</h1>
+<section class="image-container">
+	<div class="first-pic">
+		<img src="assets/Airbnb resources/air.1.jpeg" class="pic" alt="picture">
+   </div>
+  <div class="rest-pic">
+	 <img src="assets/Airbnb resources/air.2.jpeg" class="pic" alt="picture">
+	 <img src="assets/Airbnb resources/air.3.jpeg" class="pic" alt="picture">
+	 <img src="assets/Airbnb resources/air.4.jpeg" class="pic" alt="picture">
+	 <img src="assets/Airbnb resources/air.5.jpeg" class="pic" alt="picture">
   </div>
-  <section class="details-container">
-    <section class="details-container-1">
-    <div class="part-1">
-      <h3 style="margin-top: 0;"> Nevermore holidays villa by Alankaari</h3>
-      <p> 8 guests. 4 bedroom. 6 beds. 2 bathrooms</p>
-      <span class="bi bi-star-fill">4.8 rating </span>
-      <span> 15 reviews</span>
-    </div>
-    <div class="part-2">
-        <span class="bi bi-person-circle">
-        <h3> Hoisted by Alankaari</h3></span>
-        <P> Sperhoist. 2years hoisting</P>
-    </div>
-    <div class="part-3">
-        <div>
-          <span class="bi bi-calendar-date">&nbsp;
-          <h3> free Cancellations</h3></span>
-          <p>Risk free Cancellations anytime.</p>
-       </div>
-       <div>
-        <span class="bi bi-person-workspace">&nbsp;
-       <h3>Dedicated workspace</h3></span>
-        <P>A room with wifi that's well suited for working.</P>
-       </div>
-       <div>
-        <span class="bi bi-balloon-heart">&nbsp;
-         <h3>Alankaari is a superhoist</h3> </span>
-        <p>Superhosts are experienced, highly rated Hosts.</p>
-       </div>
-    </div>
-    <div class="part-4">
-        <h3>Know more about room</h3>
-        <p> The property boasts 5 ensuite bedrooms and offers exceptional views of the Arabian Sea, with direct access to the beautiful Cherai beach. The ideal destination for out-of-town groups, family get-togethers, anniversaries, bachelor/bachelorette parties, baby showers, birthday parties, team outings, and more. </p>
-       </div>
-       <h3>Where you will sleep</h3>
-     <div class="part-5">
-        <div>
-        <img src="assets/Airbnb resources/kam-idris-kyt0PkBSCNQ-unsplash.jpg" class="br-pic">
-        <p>Bedroom 1</p>
-        </div>
-       <div>
-        <img src="assets/Airbnb resources/mark-champs-Id2IIl1jOB0-unsplash.jpg" class="br-pic">
-        <p>Bedroom 2</p>
-        </div>
-    </div>
-    <h3>What this place will offer</h3>
-    <div class="part-6">
-        <span class="bi bi-flower2">&nbsp; Garden</span>
-        <span class="bi bi-house-door">&nbsp;Kitchen</span>
-        <span class="bi bi-person-workspace">&nbsp;Workspace</span>
-        <span class="bi bi-water">&nbsp;Pool</span>
-        <span class=" bi bi-alarm-fill">&nbsp;Carbonmonoxide fill</span>
-        <span class="bi bi-image">&nbsp;Nature view</span>
-        <span class="bi bi-camera-video-fill">&nbsp;Security</span>
-        <span class="bi bi-car-front-fill">&nbsp;Parking</span>
-    </section>
-    <section class="booking-box">
-     <div class="amount-box">
-       <h2 style="text-align: left; margin: 0;"> &#8377 40,000 per night<hr></h2>
-     <div class="amount">
-      <div>
-      <p>&#8377 40,000*5 nights</p>
-      <P>Airbnc services<hr></P>
-       <P> Total before taxes </P>
-     </div>
-     <div>
-      <p>&#8377 2,00,000</p>
-      <p> &#8377 34,000 <hr></p>
-      <p>&#8377 2,34,000</p>
-     </div>
-     </div>
-     <button type="submit"class="btn-2"><h3>Check availability</h3></button>
-     <p class="amount-txt"><span class="bi bi-exclamation-triangle-fill"></span> We charge extra according to number of guests and added amenities.</p>
-     </div>
-   </section>
 </section>
-</body>
+<section class="details-container">
+<section class="details-container-1">
+	  <div class="part-1">
+		  <h3 style="margin-top: 0;"> Nevermore holidays villa by Alankaari</h3>
+		  <p> 8 guests. 4 bedroom. 6 beds. 2 bathrooms</p>
+		  <span class="bi bi-star-fill">4.8 rating </span>
+		  <span> 15 reviews</span>
+	 </div>
+	 <div class="part-2">
+		  <span class="bi bi-person-circle">
+		  <h3> Hoisted by Alankaari</h3></span>
+		  <p> Sperhoist. 2years hoisting</p>
+	 </div>
+	  <div class="part-3">
+		 <div>
+			 <span class="bi bi-calendar-date">&nbsp;
+			 <h3> free Cancellations</h3></span>
+			 <p>Risk free Cancellations anytime.</p>
+			 </div>
+			<div>
+			<span class="bi bi-person-workspace">&nbsp;
+			 <h3>Dedicated workspace</h3></span>
+			 <p>A room with wifi that's well suited for working.</p>
+			 </div>
+		    <div>
+			<span class="bi bi-balloon-heart">&nbsp;
+			<h3>Alankaari is a superhoist</h3> </span>
+		    <p>Superhosts are experienced, highly rated Hosts.</p>
+		  </div>
+		</div>
+		<div class="part-4">
+		  <h3>Know more about room</h3>
+		 <p> The property boasts 5 ensuite bedrooms and offers exceptional views of the Arabian Sea, with direct access to the beautiful Cherai beach. The ideal destination for out-of-town groups, family get-togethers, anniversaries, bachelor/bachelorette parties, baby showers, birthday parties, team outings, and more. </p>
+		</div>
+	 <h3>Where you will sleep</h3>
+	 <div class="part-5">
+		 <div>
+		 <img src="assets/Airbnb resources/kam-idris-kyt0PkBSCNQ-unsplash.jpg" class="br-pic" alt="picture">
+		 <p>Bedroom 1</p>
+		 </div>
+		 <div>
+		<img src="assets/Airbnb resources/mark-champs-Id2IIl1jOB0-unsplash.jpg" class="br-pic" alt="picture">
+		 <p>Bedroom 2</p>
+		 </div>
+	 </div>
+		<h3>What this place will offer</h3>
+	 <div class="part-6">
+		<span class="bi bi-flower2">&nbsp; Garden</span>
+		<span class="bi bi-house-door">&nbsp;Kitchen</span>
+		<span class="bi bi-person-workspace">&nbsp;Workspace</span>
+		<span class="bi bi-water">&nbsp;Pool</span>
+		<span class=" bi bi-alarm-fill">&nbsp;Carbonmonoxide fill</span>
+		<span class="bi bi-image">&nbsp;Nature view</span>
+		<span class="bi bi-camera-video-fill">&nbsp;Security</span>
+		<span class="bi bi-car-front-fill">&nbsp;Parking</span>
+	 </div>
+</section>
+<section class="booking-box" style="bottom: 20px;">
+	 <div class="amount-box">
+	 <h2 style="text-align: left; margin: 0;"> ₹ 40,000 per night<hr></h2>
+	 <div class="amount">
+	 <div>
+	 <p>₹ 40,000*5 nights</p>
+	 <p>Airbnc services</p><hr><p></p>
+	 <p> Total before taxes </p>
+	 </div>
+	 <div>
+	 <p>₹ 2,00,000</p>
+	 <p> ₹ 34,000 </p><hr><p></p>
+	 <p>₹ 2,34,000</p>
+	 </div>
+	 </div>
+	 <button type="submit" class="btn-2"><h3>Check availability</h3></button>
+	 <p class="amount-txt"><span class="bi bi-exclamation-triangle-fill"></span> We charge extra according to number of guests and added amenities.</p>
+    </div>
+</section>
+</section>
+<section class="rating_container">
+	<div class="rating-txt">4.9</div>
+	<p>Guest Favourite</p>
+	<p>One of the most loved homes on Airbnb based on ratings, reviews and reliability</p>
+
+</section>
 <script>
-    window.addEventListener('scroll', function() {
-  var parentContainer = document.querySelector('.details-container');
-  var stickyContainer = document.querySelector('.booking-box');
-  var parentContainerHeight = parentContainer.getBoundingClientRect().height;
-
-  if (window.pageYOffset >= parentContainerHeight) {
-    parentContainer.style.position = 'relative';
-    stickyContainer.style.bottom = parentContainerHeight + 'px';
-  } else {
-    stickyContainer.style.position = 'sticky';
-    stickyContainer.style.bottom = '20';
-  }
-});
-
+	
 </script>
-
-</html>
+</body> 
+</html> 
