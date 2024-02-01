@@ -22,7 +22,7 @@ body{
 }
 p{
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 .bi-search{
     background-color: rgba(225, 54, 54, 0.89);
@@ -48,28 +48,29 @@ p{
 }
 .image-container{
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   width: 92%;
-   row-gap: 5px;
-   column-gap: 5px;
+   grid-template-columns: 6fr 2fr 2fr;
+   width: 90%;
+   column-gap: 7px;
    padding: 15px;
    margin-left: 1rem;
+   
 }
 .first-pic img{
-    width: 500px;
-    height: 350px;
+    width: 650px;
+    height: 430px;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
 }
-.pic3{
+.pic4{
    border-top-right-radius:20px ;
 }
 .pic5{
    border-bottom-right-radius: 20px;
 }
 .rest-pic img{
-width: 180px;
-height: 170px;
+width: 240px;
+height: 210px;
+
 }
 .br-pic{
     width: 250px;
