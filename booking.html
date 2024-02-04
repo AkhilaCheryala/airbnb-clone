@@ -15,17 +15,17 @@
             padding: 0rem 5rem;
             display: flex;
             flex-direction: column;
+            flex-wrap: wrap;
             gap: 10px;
             background-color: white;
-            flex-wrap: wrap;
             align-content: center;
         }
         form input{
             width:min-content;
         }
         .room{
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         }
         .room-type-radio{
             display: flex;
@@ -35,18 +35,21 @@
         .checkbox-group{
             display: grid;
             grid-template-columns: 1fr 1fr;
-           gap: 5px;
+            column-gap: 6rem;
         }
-        #age ,#adults,#children{
-    padding: 7px;
+        
+        #age ,.num-guests input{
+            width: 240px;
+            padding: 9px;
+    
         }
-        .age{
+        .age,.num-guests{
             display: flex;
             flex-direction: row;
-           gap: 2.5rem;
+           gap: 2rem;
         }
         .user-details input{
-        width: 200px;
+        width: 250px;
         height: 30px;
         margin-right: 1rem;
         }
@@ -72,12 +75,13 @@
        gap: 1.5rem;
         }
         .datePicker input{
+            width:170px;
             padding: 8px 40px;
         }
         #reserve{
-         margin: 2rem 0;
+         margin: 2rem 6rem;
          width: max-content;
-         padding: 1rem 12rem;
+         padding: 1rem 10rem;
          border-radius: 10px;
          background-color: rgb(202, 46, 46);
          color: white;
@@ -130,26 +134,22 @@
             .datePicker input{
                 width: 160px;
             }
-            /* h2{
-                font-size: medium;
-            } */
-            .nav-bar{
-                padding: 0rem 1rem;
-            }
-            .age input{
-                width: 50px;
-            }
+        .xyz{
+            display: inline-block;
+            gap: 2rem;
+        }
+            
 
         }
         
     </style>
 </head>
 <body>
-    
-    <form id="registrationForm" >
-        <nav class="nav-bar">
-        <h2>RESERVATION FORM</h2>
+    <nav class="nav-bar">
+        <h2>REGISTRATION FORM</h2>
         </nav>
+    <form id="registrationForm" >
+        
         <div class="user-details">
             <span>
             <h4>FirstName</h4>
@@ -173,8 +173,21 @@
           <div class="age" >
             <span>
                 <h4>Age</h4>
-              <input type="number" id="age" placeholder="enter">
+              <input type="number" id="age" class="age-x" placeholder="enter">
            </span>
+           <div class="xyz">
+            <span>
+            <h4>Gender</h4>
+            <input type="radio" id="male" name="Gender" value="Male">
+            <label>Male</label>
+           </span>
+           <span>
+            <input type="radio" id="female" name="Gender" value="Female">
+            <label>Female</label>
+           </span>
+           </div>
+          </div>
+          <div class="num-guests">
             <span>
            <h4>Adults</h4>
          <input type="number" id="adults" name="adults" min="1" max="10" required>
