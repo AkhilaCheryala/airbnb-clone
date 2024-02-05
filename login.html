@@ -77,32 +77,42 @@
 <form id="loginForm">
   <h2>Welcome to AirBnb</h2>
   <h4>Login Or Sign Up</h4>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required> 
-    <input type="password" id="password" name="password" placeholder="Enter your password" required pattern="(?=*[A-Z]\W{4,15})" >   
-    <button type="button" id="loginButton"  onclick="submitForm()">Login</button>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com"> 
+    <input type="password" id="password" name="password" placeholder="Enter your password"  required minlength="6">   
+    <button type="submit" id="loginButton"  onclick="submitForm()">Login</button>
     <div id="message"></div>
 </form>
 </body>
 <script> 
-function submitForm() {
-        var submitButton = document.getElementById("loginButton");
-        submitButton.style.backgroundColor = "#4CAF50";  // Green color
-        var messageDiv = document.getElementById("message");
-        messageDiv.innerHTML = 'Login was successful! Now you can close the window';
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
 
-        // Hide the message after 3 seconds (adjust the time as needed)
-        setTimeout(function() {
-            messageDiv.innerHTML = "";
-        }, 800);
+            var loginButton = document.getElementById("loginButton");
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var messageDiv = document.getElementById("message");
 
-        document.getElementById("loginForm").reset();
-        var submitButton = document.getElementById("loginForm").elements["loginButton"];
-        submitButton.style.backgroundColor = "#d4370b";  // Reset to original color
-        submitButton.innerHTML = "Login"; 
+            if (email === "" || password === "" ){
+                alert("Please fill in all required fields.");
+                return; 
+            }
 
-        submitButton.disabled = false;
+            // Check if email matches the pattern
+            if (!/[a-zA-Z0-9._%+-]+@gmail\.com/.test(email)) {
+                alert("Please enter a valid Gmail address.");
+                return;
+            }
 
-    } 
+            loginButton.disabled = true;
+
+            messageDiv.innerHTML = 'Login successful!!!!<br> now you can close the window...';
+
+            setTimeout(function () {
+                document.getElementById("loginForm").reset();
+                messageDiv.innerHTML = ""; 
+                loginButton.disabled = false; 
+            }, 2000);
+        });
 </script>
-</script>
+
 </html>
