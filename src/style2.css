@@ -109,25 +109,26 @@ height: 210px;
     border-bottom: 1px solid grey;
     padding: 1rem;
     width: 100%;
-   height: 100%;
+    height: 230vh;
     position: relative;
+    float: left;
     
 }
-.details-container-1{
+.details-container-2{
     width: 50%;
+    
 }
- #booking-box{
+ #details-container-1{
    position: sticky;
-  bottom: 0;
-
-   
-
-   
+   top: 20px;
+   z-index: 1000;
+   display: inline;
+  
+  
  } 
 .amount-box{
-    position: absolute;
-    right: 30px;
-    z-index: 1000;
+   /* position: absolute; */
+   margin-left: 50rem;
     border: 1px solid black;
     border-radius: 20px;
     padding: 1rem;
