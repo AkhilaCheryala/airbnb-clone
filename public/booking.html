@@ -23,6 +23,7 @@
         form input{
             width:min-content;
             text-transform: capitalize;
+            border: 1px solid grey;
         }
         .room{
         width: 180px;
@@ -120,6 +121,9 @@
                 display: flex;
                 flex-direction: column;
             }
+            #checkMsg{
+                color: red;
+            }
             .checkbox-group{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -174,7 +178,7 @@
           <div class="age" >
             <span>
                 <h4>Age</h4>
-              <input type="number" id="age" class="age-x" placeholder="enter">
+              <input type="number" id="age" class="age-x" placeholder="enter" required>
            </span>
            <div class="xyz">
             <span>
@@ -185,6 +189,10 @@
            <span>
             <input type="radio" id="female" name="Gender" value="Female">
             <label>Female</label>
+           </span>
+           <span>
+            <input type="radio" id="other" name="Gender" value="Other">
+            <label>Others</label>
            </span>
            </div>
           </div>
@@ -203,7 +211,7 @@
              <div>
               <img src="assets/Airbnb resources/olexandr-ignatov-w72a24brINI-unsplash.jpg" class="room" alt="bedroom picture">
               <div>
-              <input type="radio" id="delux" name="roomType" value="delux">
+              <input type="radio" id="delux" name="roomType" value="delux" required>
               <label>DELUX</label>
             </div>
             </div>
@@ -250,12 +258,18 @@
     function submitForm(event) {
     var form = document.getElementById("registrationForm");
     var reserveButton = document.getElementById("reserve");
+    
 
     // checking if fields are filled
     var firstName = document.getElementById("firstName").value.trim();
     var lastName = document.getElementById("lastName").value.trim();
-    var checkInDate = document.getElementById("checkIn").value.trim();
+    var age = document.getElementById("age").value.trim();
+   var checkInDate = document.getElementById("checkIn").value.trim();
     var checkOutDate = document.getElementById("checkOut").value.trim();
+    if(age<18){
+        alert("you must be 18 or above to be able to make booking");
+        return;
+    }
 
     if (firstName === "" || lastName === "" || checkInDate === "" || checkOutDate === "") {
         alert("Please fill in all required fields.");
@@ -273,6 +287,8 @@
                 window.location.href = "../index.html";
             }, 1000);
     }
+    
+
 }
 
    

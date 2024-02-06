@@ -79,16 +79,9 @@
  
   
    } 
-   /* .txt{
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    padding: 1rem;
-    font-size:12px;
-   } */
-}
+   
 @media screen and (max-width:1000px) and (min-width:700px) {
-    .bar-part-1,.filter,.toggle-box{
+    .bar-part-1,.toggle-box{
         display: none;
     }
     .logo-1{
