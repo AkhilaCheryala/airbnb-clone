@@ -46,42 +46,56 @@ p{
 .text1,.text2{
     border-right: 1px solid grey;
 }
-.container {
-    width: 70%;
-    margin: 0 auto; /* Center the container */
-  }
-  
-  .image-container {
+.image-container {
     display: grid;
+    width: 70%; /* occupy 70% of the screen width */
+    margin: 0 auto; /* center the grid */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 1rem; /* Adjust the gap between grid items */
-  }
-  
-  .pic1 {
+}
+
+.pic1 {
     grid-column: span 2; /* Takes up 2 columns */
     grid-row: span 2; /* Takes up 2 rows */
-  }
-  
-  .pic2,
-  .pic3,
-  .pic4,
-  .pic5 {
-    /* Each of these divs will take up half of the remaining space */
-    width: calc((100% - 1rem) / 4); /* Adjusted for the gap */
-    height: calc((100% - 1rem) / 4); /* Adjusted for the gap */
-  }
-  
-  .pic2,
-  .pic3 {
-    grid-row: 1;
-  }
-  
-  .pic4,
-  .pic5 {
-    grid-row: 2;
-  }
-  
+    max-width: 300px;
+    
+}
+/* .pic2,
+.pic3,
+.pic4,
+.pic5 {
+    width: calc((50% - 1rem) / 2); /* Each takes up 25% of the width of pic1 */
+    height: calc((50% - 1rem) / 2); /* Each takes up 25% of the height of pic1 */
+}
+
+.pic2 img,
+.pic3 img,
+.pic4 img,
+.pic5 img {
+    max-width: 100%; /* Ensure images fit within their containers */
+} */
+
+.pic2 {
+    grid-column: 3; /* 3rd column */
+    grid-row: 1; /* 1st row */
+}
+
+.pic3 {
+    grid-column: 3; /* 3rd column */
+    grid-row: 2; /* 2nd row */
+}
+
+.pic4 {
+    grid-column: 4; /* 4th column */
+    grid-row: 1; /* 1st row */
+}
+
+.pic5 {
+    grid-column: 4; /* 4th column */
+    grid-row: 2; /* 2nd row */
+}
+
 
 .br-pic{
     width: 250px;
