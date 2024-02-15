@@ -105,18 +105,12 @@
             form{
                 padding: 2rem;
                 display: flex;
-               
                 justify-content: center;
                 gap: 2rem;
-                align-items: flex-start;
+                align-items: center;
                 align-content: center;
             }
-           .room-type-radio{
-                display: flex;
-                flex-direction: row;
-                
-                gap: 4rem;
-            }
+           
             .datePicker,.user-details{
                 display: flex;
                 flex-direction: column;
@@ -131,20 +125,30 @@
             }
             #reserve{
                 padding: 1rem 5rem;
-                margin-left: 2.5rem;
+                margin: 2rem;
+            }
+            .age,.num-guests,.room-type-radio{
+                display: flex;
+                flex-direction: column;
+            }
+            .room-type-radio{
+                gap: 2rem;
             }
             .user-details input{
                 width: 250px;
             }
             .datePicker input{
-                width: 160px;
+                width: 170px;
+                padding: 8px 43px;
             }
         .xyz{
             display: inline-block;
             gap: 2rem;
+        } 
+        .room{
+            width: 200px;
+            height: 150px;
         }
-            
-
         }
         
     </style>
@@ -181,9 +185,9 @@
               <input type="number" id="age" class="age-x" placeholder="enter" required>
            </span>
            <div class="xyz">
-            <span>
-            <h4>Gender</h4>
-            <input type="radio" id="male" name="Gender" value="Male">
+             <span>
+             <h4>Gender</h4>
+             <input type="radio" id="male" name="Gender" value="Male">
             <label>Male</label>
            </span>
            <span>
