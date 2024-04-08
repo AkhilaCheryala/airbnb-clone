@@ -20,7 +20,7 @@
       scrollbar.scrollLeft = Math.min(newScrollLeft, scrollbar.scrollWidth - scrollbar.clientWidth);
     });
  });
-// iframe
+
 function openIframe() {
   document.getElementById("overlay").style.display = "block";
   document.getElementById("iframeContainer").style.display = "block";
@@ -45,10 +45,10 @@ window.addEventListener("scroll", () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scrolling down
+ 
     document.getElementById("nav-bar-4").style.transform = "translateY(100%)";
   } else {
-    // Scrolling up
+  
     document.getElementById("nav-bar-4").style.transform = "translateY(0)";
   }
 
